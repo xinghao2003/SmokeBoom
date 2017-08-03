@@ -1,5 +1,5 @@
-name: ISSmokebomb
+name: SmokeBomb
 version: "1.0.0"
-api: [1.12.0]
+api: [3.0.0-ALPHA7]
 author: FinoAdez
-main: ISSmokebomb\ISSmokebomb
+main: SmokeBomb\SmokeBomb
