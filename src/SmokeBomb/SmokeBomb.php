@@ -12,11 +12,11 @@ use pocketmine\level\Position;
 use pocketmine\math\Vector3; 
 use pocketmine\level\particle\MobSpawnParticle; 
 
-class ISSmokebomb extends PluginBase implements Listener { 
+class SmokeBomb extends PluginBase implements Listener { 
 
   public function onEnable(){ 
     $this->getServer()->getPluginManager()->registerEvents($this, $this); 
-    $this->getLogger()->info("§bSmokebomb 加载!"); 
+    $this->getLogger()->info("§bSmokeBomb 加载!"); 
   } 
                                                           
   public function onSnowballLaunch(ProjectileLaunchEvent $event){ 
@@ -49,7 +49,7 @@ class ISSmokebomb extends PluginBase implements Listener {
   } 
                                                           
   public function onDisable(){ 
-    $this->getLogger()->info("Smokebomb 卸载!"); 
+    $this->getLogger()->info("SmokeBomb 卸载!"); 
   } 
  } 
 ?>
