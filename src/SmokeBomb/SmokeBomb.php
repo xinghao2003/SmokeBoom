@@ -21,7 +21,7 @@ class SmokeBomb extends PluginBase implements Listener {
                                                           
   public function onSnowballLaunch(ProjectileLaunchEvent $event){ 
     $entity = $event->getEntity(); 
-    $shooter = $entity->shootingEntity; 
+    $shooter = $entity->getOwningEntity(); 
     if($entity instanceof Snowball && $shooter instanceof Player){ 
       $shooter->sendTip("§b烟雾弹发射完毕"); 
     } 
@@ -30,7 +30,7 @@ class SmokeBomb extends PluginBase implements Listener {
   public function onSnowballDown(EntityDespawnEvent $event){ 
     if($event->getType() === 81){ 
       $entity = $event->getEntity(); 
-      $shooter = $entity->shootingEntity; 
+      $shooter = $entity->getOwningEntity(); 
       $x = $entity->getX(); 
       $y = $entity->getY(); 
       $z = $entity->getZ(); 
